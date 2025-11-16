@@ -211,7 +211,7 @@ const cancelCreate = () => {
 const editTask = (task: Task) => {
   editingTask.value = task
   editForm.title = task.title
-  editForm.description = task.description || ''
+  editForm.description = task.description ?? ''
   editForm.priority = task.priority
   editForm.projectId = task.project_id || ''
   editForm.dueDate = task.due_date ? task.due_date.split('T')[0] : ''
@@ -225,8 +225,8 @@ const handleUpdateTask = async () => {
       title: editForm.title,
       description: editForm.description,
       priority: editForm.priority,
-      project_id: editForm.projectId || null,
-      due_date: editForm.dueDate || null
+      project_id: editForm.projectId || undefined,
+      due_date: editForm.dueDate || undefined
     })
     cancelEdit()
   } catch (error) {

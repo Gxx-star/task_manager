@@ -13,7 +13,7 @@
     "test:unit": "vitest",
     "test:e2e": "nightwatch tests/e2e/*",
     "build-only": "vite build",
-    "type-check": "vue-tsc --build",
+    "type-check": "vue-tsc --build --project tsconfig.app.json",
     "lint": "eslint . --fix --cache",
     "format": "prettier --write src/"
   },
