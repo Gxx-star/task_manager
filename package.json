@@ -8,12 +8,12 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --build && vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "test:unit": "vitest",
     "test:e2e": "nightwatch tests/e2e/*",
     "build-only": "vite build",
-    "type-check": "vue-tsc --build --noEmit",
+    "type-check": "vue-tsc --noEmit",
     "lint": "eslint . --fix --cache",
     "format": "prettier --write src/"
   },
